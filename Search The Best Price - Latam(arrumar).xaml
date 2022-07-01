@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Search_The_Better_Price" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1348,3196" sap2010:WorkflowViewState.IdRef="Search_The_Better_Price_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="46">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Search_The_Better_Price" sap:VirtualizedContainerService.HintSize="1358,3131" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="PossibleDates">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(Of String) From {&quot;2022-06-26&quot;,&quot;2022-06-27&quot;,&quot;2022-06-28&quot;,&quot;2022-06-29&quot;,&quot;2022-06-30&quot;,&quot;2022-07-01&quot;,&quot;2022-07-02&quot;,&quot;2022-07-03&quot;,&quot;2022-07-04&quot;,&quot;2022-07-05&quot;,&quot;2022-07-06&quot;,&quot;2022-07-07&quot;,&quot;2022-07-08&quot;,&quot;2022-07-09&quot;,&quot;2022-07-10&quot;,&quot;2022-07-11&quot;,&quot;2022-07-12&quot;,&quot;2022-07-13&quot;,&quot;2022-07-14&quot;,&quot;2022-07-15&quot;}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="FinalTable" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Destinos">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="New Dictionary(Of String,String) From {{&quot;OOL&quot;,&quot;Gold Coast&quot;},{&quot;BNE&quot;,&quot;Brisbane&quot;}}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="Total" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[FinalTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1316,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Dia&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Destino&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1316,2167" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[Destinos]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="Aeroporto" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1280,2043" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1238,1951" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[PossibleDates]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="ItemDate" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1202,1827" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: Busca | 123Milhas" sap:VirtualizedContainerService.HintSize="1160,1735" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="20fd1463-614e-4c06-ac6a-c4012f10ab17" Version="V1" WindowResize="Maximize">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1126,1519" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NCheck Action="Check" DelayBefore="3" DisplayName="Check/Uncheck 'Usar Pontos LATAM Pass'" sap:VirtualizedContainerService.HintSize="1084,156" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="20fd1463-614e-4c06-ac6a-c4012f10ab17" Version="V1">
+                              <uix:NCheck.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.latamairlines.com/br/pt/oferta-voos?origin=SAO&amp;outbound=2022-06-27T15%3A00%3A00.000Z&amp;destination=OOL&amp;inbound=null&amp;adt=2&amp;chd=0&amp;inf=0&amp;trip=OW&amp;cabin=Economy&amp;redemption=false&amp;sort=RECOMMENDED" DesignTimeRectangle="488, 220, 40, 40" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='jss4' aaname='' /&gt;" Guid="f46a4ead-4ab7-43ae-a70d-1af8d9bb57ab" InformativeScreenshot="5ee7057187b0058784b3a6d124b31e3b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Seleção de voos | LATAM Airlines' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="534, 227, 177, 22" FriendlyName="'Usar Pontos LATAM Pass'" FullSelectorArgument="&lt;webctrl aaname='Usar Pontos ' parentid='get-redemption-checkbox-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Usar Pontos ' parentid='get-redemption-checkbox-label' tag='SPAN' type='' class='text-container' check:innerText='Usar Pontos LATAM Pass' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheck.Target>
+                            </uix:NCheck>
+                            <uix:NCheck Action="Uncheck" DelayAfter="2" DisplayName="Check/Uncheck 'Usar Pontos LATAM Pass'" sap:VirtualizedContainerService.HintSize="1084,156" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="20fd1463-614e-4c06-ac6a-c4012f10ab17" Version="V1">
+                              <uix:NCheck.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.latamairlines.com/br/pt/oferta-voos?origin=SAO&amp;outbound=2022-06-27T15%3A00%3A00.000Z&amp;destination=OOL&amp;inbound=null&amp;adt=2&amp;chd=0&amp;inf=0&amp;trip=OW&amp;cabin=Economy&amp;redemption=false&amp;sort=RECOMMENDED" DesignTimeRectangle="488, 220, 40, 40" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='jss4' aaname='' /&gt;" Guid="f46a4ead-4ab7-43ae-a70d-1af8d9bb57ab" InformativeScreenshot="5ee7057187b0058784b3a6d124b31e3b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Seleção de voos | LATAM Airlines' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="534, 227, 177, 22" FriendlyName="'Usar Pontos LATAM Pass'" FullSelectorArgument="&lt;webctrl aaname='Usar Pontos ' parentid='get-redemption-checkbox-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Usar Pontos ' parentid='get-redemption-checkbox-label' tag='SPAN' type='' class='text-container' check:innerText='Usar Pontos LATAM Pass' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheck.Target>
+                            </uix:NCheck>
+                            <Pick sap:VirtualizedContainerService.HintSize="1084,1034" sap2010:WorkflowViewState.IdRef="Pick_1">
+                              <PickBranch DisplayName="Data disponível" sap:VirtualizedContainerService.HintSize="526,988" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                                <PickBranch.Trigger>
+                                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61f0c478-4b5d-41ce-b59d-56912eed803a" InformativeScreenshot="6ccd7d63009863a4f72fb29dcf9042c7" Selector="&lt;html app='chrome.exe' title='Seleção de voos | LATAM Airlines' /&gt;&lt;webctrl parentid='titleSelectFlightDesktop' tag='STRONG' aaname='voo de ida' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                </PickBranch.Trigger>
+                                <Sequence sap:VirtualizedContainerService.HintSize="476,684" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Total]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='ol' idx='2' /&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="20fd1463-614e-4c06-ac6a-c4012f10ab17" Version="V1">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="8, 376, 888, 370" FriendlyName="'Resumo de'" FullSelectorArgument="&lt;webctrl aria-role='region' id='WrapperBodyFlights' tag='DIV' /&gt;" Guid="27f57740-e6cf-4911-b0f9-5c8f395f655b" InformativeScreenshot="4e0f684efb56763157406959c2983b56.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Seleção de voos | LATAM Airlines' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Total]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,395" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                    <ui:ForEachRow.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ItemDate,CurrentRow(&quot;Total&quot;),Aeroporto.Value}]" DataTable="[FinalTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEachRow.Body>
+                                  </ui:ForEachRow>
+                                </Sequence>
+                              </PickBranch>
+                              <PickBranch DisplayName="Não há voos para essa data" sap:VirtualizedContainerService.HintSize="384,988" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                                <PickBranch.Trigger>
+                                  <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'H1'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TextExists_2" Occurrence="1" Text="Não há*">
+                                    <ui:TextExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="597ea2da-b0b1-489e-b0fc-72c5f5bccf7e" InformativeScreenshot="b8ec158c577a14c4a223a7c860c71a52" Selector="&lt;html app='chrome.exe' title='Seleção de voos | LATAM Airlines' /&gt;&lt;webctrl aaname='Não há voos para esta data' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:TextExists.Target>
+                                  </ui:TextExists>
+                                </PickBranch.Trigger>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Não existe voo para a data: &quot;+ItemDate]" />
+                              </PickBranch>
+                            </Pick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1382, 754" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACv0lEQVRYR+3VTUhUURjG8eNkpRUmLQpMKaK8WiQkSeJCy/IjKpAImqlF0EIqIiJsJRG1bdG6NoUYaupIGvlV0aJFtGgTtDBcJBV9LUyKsPm4/Z8755bonWoVLe4LP+7MneE87z3nzBkTVlhhhfVf1HSsXBZhF2KIWnpdg5xkh2PcYSeCLWjFBZxCJXJrB2qN6W8sQAuiWcRQY+INOVxtOkWA5GEcLtJI2dfdn+o2R9wxZwlBZ/EaabjWR1xyx0ryTH9TOQO/g4v0HClL97toIMLVplOE+A2MQuEJe1UDPa67Xk9/GF9saALT9qr3s+5waavpa3YY+DUSmJ1DwaImLpq+Js2WTacIkQiqsR/H8BbeDCRvOcsJGbZhn3EO29CGGej+w/bBHWsYuB570Wx1wg+/hpWwyQFFoBThpddAtLwrfcdZR8CkDRpBPjQrBXgC3X+B1cg8XcZBvIfCr6MQNilLLWiAGUj1OoUMHIM2306FWBWYghp4AM2UH66ZeAM9/QccxwoYE/9NEwEN9EDL432uAKsE/rJoL5yASf1q4DL8tRfthQ6sgjdWYCkIgQ0owNKS3IPCpRNaDmNuN/gN1OEk2vAU/j44g8x3gkpBWNjA0Z8NbMAo/PABFIHPyuwotvyg/sbt0DKoiQHkwn5pXhEW2EA67oVvxH0oWGdBN+ZuvAroCU+jzN6TUujnqQZGsBQ2cV4RtqCBZ6Yih5BSPIL/5K+gdT+AFndkU31xfPchBv5mg8ahjViNG9CBpPtXkWksqIIaSNz0fna98MMlie/QBkxhonOocisD37VB8hUz8MOnUIW/amDCNtCV6vE22GMoWGE+LYN/LE8yC2s5jnUaDsGfCUniOfQ/kT1cZRvIxz4cQU2q21lMwB7oLIhmoaVYdmWwSgH6U2rCebRDf0TFpu8P4WGFFVZY/76M+QFnxsbQcEMM5wAAAABJRU5ErkJggg==" InformativeScreenshot="7d8a52c0c6c1f9ec74f770d24c7f948a.png" Selector="&lt;html app='chrome.exe' title='Busca | 123Milhas' /&gt;" Url="[&quot;https://www.latamairlines.com/br/pt/oferta-voos?origin=SAO&amp;outbound=&quot;+ItemDate+&quot;T15%3A00%3A00.000Z&amp;destination=&quot;+Aeroporto.Key+&quot;&amp;inbound=null&amp;adt=2&amp;chd=0&amp;inf=0&amp;trip=OW&amp;cabin=Economy&amp;redemption=false&amp;sort=RECOMMENDED&quot;]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1316,733" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,647" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,555" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="ResultadosPassagens.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,249" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(DateTime.Now.Day.ToString+&quot;-&quot;+DateTime.Now.Month.ToString+&quot;Latam&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[FinalTable]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
