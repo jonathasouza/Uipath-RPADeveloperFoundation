@@ -10,6 +10,7 @@
     "UiPath.Mail.Activities": "[1.16.0-preview]",
     "UiPath.PDF.Activities": "[3.7.2-preview]",
     "UiPath.System.Activities": "[22.4.1]",
+    "UiPath.Testing.Activities": "[22.4.3]",
     "UiPath.UIAutomation.Activities": "[22.4.6]"
   },
   "webServices": [],
@@ -43,7 +44,15 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8c8cfa54-d75a-495d-b470-b06bb08f0529",
+        "dataVariationFilePath": ".variations\\Results_Sheet1.json",
+        "testCaseType": "TestCase",
+        "fileName": "Testing\\TestCase.xaml"
+      }
+    ],
     "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",
